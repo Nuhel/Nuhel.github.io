@@ -1,0 +1,763 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:			Kicko
+Version:			1.1
+Last change:	01/12/2016
+Assigned to:	Sven Lennartz (sl)
+Primary use:	Company 
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2. Header / #kicko_header
+3. Navigation / .kicko_nav
+4. About / .about
+5. 
+
+
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+
+Background:	#ffffff (white)
+Content:		#fa4659 (light Red)
+Header h1:	#454444,#fa4659,#ffffff (light Black, light Red, white)
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Typography]
+
+Body:							Open Sans;
+Headers:					38px, Montserrat;
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+			Dynamic CSS For All Sections
+-------------------------------------------------------------------*/
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4{
+	text-transform: uppercase;
+}
+section{
+	padding: 100px 0;
+}
+.headtitle h1 {
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+.headtitle p {
+  font-family: "open sans";
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+.headtitle {
+  margin-bottom: 62px;
+}
+.desc_text {
+  font-size: 14px;
+} 
+
+
+/*------------------------------------------------------------------
+			Header Sections
+-------------------------------------------------------------------*/
+/* Nav Bar */
+#kicko_header {
+  position: relative;
+}
+.kicko_nav {
+  background-color: transparent;
+  border: medium none;
+  position: fixed;
+  transition: all 0.2s ease 0s;
+  width: 100%;
+  z-index: 16;
+}
+#kicko_header button {
+  margin-top: 20px;
+}
+#kicko_header button:focus{
+	background: transparent;
+}
+#kicko_header .kicko_nav{
+	border-radius: 0;
+}
+.kicko_nav_bg {
+  background: #6D5C80;
+}
+.kicko_nav .brand_image > img {
+  max-width: 195px;
+  width: 100%;
+}
+.kicko_nav .navbar-nav > li > a {
+  color: #fff;
+  font-size: 18px;
+  margin: 30px 5px 0;
+  padding: 5px;
+  text-transform: uppercase;
+  font-family: Montserrat;
+}
+.kicko_nav .brand_image{
+	height: auto;
+}
+.kicko_nav .navbar-nav > li a:focus,
+.kicko_nav .navbar-nav > .active a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.kicko_nav .navbar-nav > .active  a,
+.kicko_nav .navbar-nav > .active  a:hover,
+.kicko_nav .navbar-nav > li  a:hover {
+  background-color: transparent;
+  color: #fa4659 !important;
+}
+
+.kicko_nav .navbar-toggle{
+	border:none; 
+}
+.kicko_nav .navbar-toggle *{
+	transition: .3s all;
+}
+.kicko_nav .navbar-toggle:hover{
+	background: transparent;
+}
+.cross .bar1 {
+  transform: rotate(45deg);
+}
+.cross .bar2 {
+  display: none;
+}
+.cross .bar3 {
+  margin-top: -2px !important;
+  transform: rotate(-45deg);
+}
+
+/* Carousel */
+.carousel-indicators .active{
+	box-shadow: 0px 0px 6px 0px rgba(250,70,89,1);
+	background: #fa4659;
+	border-color: #fa4658;
+}
+
+.carousel-indicators li {
+  background-color: #dbcacf;
+  border-color: #dbcace;
+}
+#headerCarousel .header-text {
+  margin-top: -70px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+#headerCarousel .item > img {
+  max-height: 600px;
+  min-width: 100%;
+}
+#headerCarousel .header-text h2 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+#headerCarousel .header-text h3 {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 16px;
+}
+#headerCarousel h2,h3{
+	margin: 0;
+}
+
+.slider_learn {
+  background: #fa4659 none repeat scroll 0 0;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  margin-top: 50px;
+  padding: 20px 70px;
+}
+.slider_learn:hover, .slider_learn:focus{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+/*------------------------------------------------------------------
+				about Section
+-------------------------------------------------------------------*/
+.about {
+  background: #f4f4f4 none repeat scroll 0 0;
+}
+.about .headtitle h1 {
+  color: #454444;
+}
+.about .headtitle p{
+  color: #797878;
+}
+.about_left h3 {
+  color: #454444;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.about_left > ul {
+  padding: 0 0 0 15px;
+}
+.about_left p, .about_left ul li p{
+	color: #8b8a8a;
+	font-family: Montserrat;
+	font-size: 16px;
+}
+.about_left ul li{
+	color: #fa4659;
+	font-size: 16px;
+}
+.about_left .title_two {
+  margin-top: 40px;
+}
+.about_video{
+	position: relative;
+}
+.about_video img {
+  cursor: pointer;
+  margin: auto;
+}
+#about_video_modal .modal-body{
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+#about_video_modal .modal-body iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about_video .play {
+  left: 50%;
+  margin: -54px 0 0 -54px;
+  position: absolute;
+  top: 50%;
+  opacity: .9;
+}
+.about_video:hover .play{
+	opacity: 1;
+}
+#about_video_modal .close {
+  color: #fff;
+  font-size: 30px;
+  margin-right: -23px;
+  opacity: .9;
+}
+#about_video_modal .close:hover {
+  opacity: 1;
+}
+
+
+/*------------------------------------------------------------------
+				OUR TEAM Section
+-------------------------------------------------------------------*/
+.our_team {
+  background-image: url("../images/team_bg.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.our_team .headtitle h1 {
+  color: #fa4659;
+}
+.our_team .headtitle p {
+  color: #cec3c9;
+}
+.team_member {
+  margin: auto;
+  max-width: 400px;
+}
+.team_member img {
+  margin: auto;
+}
+.team_member > h3 {
+  color: #f4f4f4;
+  font-weight: 600;
+  margin: 45px 0 20px;
+}
+.team_member h4 {
+  color: #e0dadd;
+  margin: 0 0 40px;
+}
+.team_member .desc_text {
+  color: #c4b6c0;
+}
+.member_social {
+  list-style: outside none none;
+  margin: 50px 0 0;
+  padding: 0;
+}
+.member_social > li {
+  display: inline-block;
+  background: #454444;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.member_social > li:hover {
+  background: #fa4659 none repeat scroll 0 0;
+}
+.member_social > li a {
+  color: #fff;
+  display: inline-block;
+  line-height: 2.3;
+  width: 100%;
+}
+
+
+
+/*------------------------------------------------------------------
+				OUR SERVICE Section
+-------------------------------------------------------------------*/
+.our_service .service_container{
+	max-width: 965px;
+	text-align: center;
+}
+.our_service .headtitle h1{
+  color: #454444;
+}
+.our_service .headtitle p{
+  color: #7c7c7c;
+}
+.our_service .desc_text {
+  color: #8f8f8f;
+}
+.our_service .service_item {
+  border: 2px solid #ececec;
+  margin: 0 auto 22px;
+  max-width: 300px;
+  padding: 30px;
+}
+.our_service .service_icon {
+  background: #454444 none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #fff;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  width: 80px;
+}
+.our_service .service_icon i {
+  font-size: 47px;
+  line-height: 1.7;
+}
+.our_service .service_item > h4 {
+  color: #454444;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 22px 0 28px;
+}
+.our_service .service_item:hover{
+	box-shadow:         0px 0px 9px 0px rgba(50, 50, 50, 0.34);
+	border-color: #feecee;
+}
+.our_service .service_item:hover .service_icon{
+	background: #fa4659;
+}
+.service_learn {
+  background: #fa4659 none repeat scroll 0 0;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  padding: 20px 70px;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.service_learn:hover,  .service_learn:focus{
+  text-decoration: none;
+  color: #fff;
+}
+.portfolio_img {
+  border: 2px solid transparent;
+  margin-bottom: 25px;
+  overflow: hidden;
+  transition: all 0.2s ease 0s;
+  max-width: 380px;
+  margin: 15px auto;
+}
+.portfolio_img:hover {
+  border-color: #feecee;
+  box-shadow: 0 0 9px 0 rgba(50, 50, 50, 1);
+}
+
+
+/*------------------------------------------------------------------
+				OUR PORTFOLIO Section
+-------------------------------------------------------------------*/
+
+.our_portfolio{
+	background: #f4f4f4;
+}
+.our_portfolio .headtitle h1{
+  color: #454444;
+}
+.our_portfolio .headtitle p{
+  color: #797878;
+}
+.our_portfolio .portfolio_img img{
+	margin: auto;
+}
+
+
+
+/*------------------------------------------------------------------
+				Review Section
+-------------------------------------------------------------------*/
+.review {
+  background-image: url("../images/review_bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  padding-bottom: 150px;
+}
+.review .headtitle h1{
+  color: #fa4659;
+}
+.review .headtitle p{
+  color: #cfc5cb;
+}
+
+#review_outer_slider .desc_text {
+  color: #9a8589;
+}
+.review_slider_desc {
+  background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+  min-height: 379px;
+  padding: 100px;
+}
+
+.review_slider_desc .desc {
+  color: #9a8488;
+}
+#review_outer_slider .img-responsive {
+  border: 10px solid #fff;
+}
+.review_main_slider_indicator {
+  bottom: -100px;
+}
+
+#review_outer_slider .carousel-control.left, .carousel-control.right {
+  background-image: none;
+  background-repeat: repeat-x;
+}
+
+#review_outer_slider .carousel-control {
+  background: #d4495a none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40px;
+  line-height: 2.4;
+  margin-top: -45px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  top: -185px;
+  height: 90px;
+  width: 90px;
+}
+
+.review_slider_desc > h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 50px;
+}
+.text-center.review_slider_desc > h3 {
+  color: #9b8487;
+  font-size: 16px;
+}
+.review_slider_control {
+  float: right;
+  max-width: 749px;
+  position: relative;
+  width: 100%;
+}
+
+.review_slider_control .left.carousel-control {
+  left: -30px;
+}
+.review_slider_control .right.carousel-control {
+  right: -30px;
+}
+#review_outer_slider img{
+	margin: auto;
+}
+
+/*------------------------------------------------------------------
+				Contact us Section
+-------------------------------------------------------------------*/
+.contact{
+	background: #545456;
+	color: #fff;
+}
+.contact .headtitle h1, .contact h3 {
+  color: #fa4659;
+}
+.contact .headtitle p {
+  color: #c4c4c5;
+}
+.send-box {
+  clear: both;
+  text-align: center;
+}
+.send-box .send-btn {
+  background: #fa4659 none repeat scroll 0 0;
+  border: 0 none;
+  color: #fff;
+  font-weight: 600;
+  max-width: 380px;
+  padding: 10px;
+  width: calc(100% - 30px);
+}
+#contact_form .form-control {
+  background: #4c4c4d none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+}
+.message-box {
+  height: 265px !important;
+  resize: none;
+}
+.contact .media-left {
+  font-size: 30px;
+}
+.media-left .icons {
+  background: #fa4659 none repeat scroll 0 0;
+  border-radius: 50%;
+  height: 45px;
+  margin-top: 7px;
+  text-align: center;
+  width: 45px;
+}
+#contact_form input {
+  height: 52px;
+}
+
+
+
+/*------------------------------------------------------------------
+				Follow us Section
+-------------------------------------------------------------------*/
+.follow {
+  background-image: url("../images/follow_bg.jpg");
+  background-position: center top;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.follow .headtitle h1{
+  color: #fff;
+}
+.follow .headtitle p {
+  color: #ddc9d1;
+}
+.follow_social {
+  clear: both;
+  list-style: outside none none;
+  margin: auto auto 60px;
+  padding: 0;
+  width: 275px;
+}
+
+.contact_left_title{
+	margin-bottom: 48px;
+}
+.follow_social > li {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 60px;
+  text-align: center;
+  width: 60px;
+  transition: .3s all;
+}
+.follow_social > li a {
+  color: #fff;
+  display: block;
+  font-size: 25px;
+  line-height: 2.3;
+}
+.follow_social > li:hover {
+  border: 2px solid #fa4658;
+  background: #fa4659;
+}
+.copyright{
+	text-align: center;
+	color: #fff;
+}
+
+/*------------------------------------------------------------------
+				Responsive CSS
+-------------------------------------------------------------------*/
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.review_slider_control {
+	  max-width: 612px;
+	}
+}
+
+@media screen and (max-width: 1180px) {
+
+	.service_learn {
+	  margin-top: 30px;
+	}
+	#headerCarousel .header-text h2 {
+	  margin-bottom: 20px;
+	}
+	.slider_learn {
+	  margin-top: 30px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.review_slider_desc{
+		margin-top: 20px;
+	}
+	.kicko_nav .brand_image > img {
+	  max-width: 170px;
+	}
+	.kicko_nav .navbar-nav > li > a {
+	  margin: 26px 0;
+	}
+	#headerCarousel .header-text h2 {
+	  font-size: 38px;
+	}
+	.slider_learn {
+	  margin-top: 20px;
+	}
+	.about_video {
+	  margin-top: 30px;
+	}
+	.contact h3 {
+	  text-align: center;
+	}
+	#contact_form{
+		margin-top: 30px;
+	}
+	.media {
+	  margin: 5px auto;
+	  width: 250px;
+	}
+	
+}
+
+
+@media screen and (max-width: 785px) {
+	.review_slider_control .left.carousel-control {
+  	left: -5px;
+	}
+	.review_slider_control .right.carousel-control {
+	  right: -5px;
+	}
+	#review_outer_slider .carousel-control {
+	  height: 50px;
+	  width: 50px;
+	  font-size: 27px;
+	  line-height: 2;
+	}
+	#headerCarousel {
+	  padding-top: 75px;
+	}
+	.kicko_nav{
+		background: #6d5c80 none repeat scroll 0 0;
+	}
+
+	#kicko_header #bs-example-navbar-collapse-1 {
+	  background: #6d5c80 none repeat scroll 0 0;
+	  border: 0 none;
+	  box-shadow: none;
+	}
+	
+	/* Change Navbar brackpoint */
+  #kicko_header .navbar-header {
+      float: none;
+  }
+  #kicko_header .navbar-toggle {
+      display: block;
+  }
+  #kicko_header .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  #kicko_header .navbar-collapse.collapse {
+      display: none!important;
+  }
+  #kicko_header .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+  }
+  #kicko_header .navbar-nav>li {
+      float: none;
+  }
+  #kicko_header .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  #kicko_header .navbar-text {
+      float: none;
+      margin: 15px 0;
+  }
+  /* since 3.1.0 */
+  #kicko_header .navbar-collapse.collapse.in { 
+      display: block!important;
+  }
+  #kicko_header .collapsing {
+      overflow: hidden!important;
+  }
+
+  .kicko_nav .brand_image > img {
+	  max-width: 150px;
+	}
+
+	#kicko_header .navbar-nav > li > a{
+		margin: 0 15px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.team_member {
+	  margin: 20px auto;
+	}
+	.about_left h3, .about_left p {
+	  text-align: center;
+	}
+	.about_left > ul {
+    margin: auto;
+    max-width: 325px;
+  }
+	
+}
+
+@media screen and (max-width: 480px) {
+	.review_slider_desc {
+	  padding: 50px;
+	}
+	section {
+	  padding: 60px 0;
+	}
+}
